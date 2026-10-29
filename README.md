@@ -1,12 +1,4 @@
-# jackyack
-A cheap open source CW keyer (ATtiny*5)
-This is a tiny, cheap, and open source CW keyer. It is 
-described in detail on my blog:
-http://blog.templaro.com/a-tiny-and-open-source-cw-keyer/
- 
- ### About this fork:
-
- # TinyKeyer (JackYack v0.75 - Arduino IDE Refactoring)
+# TinyKeyer (JackYack v0.75 - Arduino IDE Refactoring)
 
 A versatile, compact open-source CW (Morse Code) keyer for the **Atmel AVR ATtiny85** microcontroller (specifically configured for **Digispark** and **Adafruit Trinket** compatible boards at 16.5 MHz / 16 MHz).
 
@@ -110,10 +102,10 @@ All startup and reset parameters are now accessible and cleanly documented in `s
 | **`B`** | Set keyer to **IAMBIC B** mode. (Acknowledged with `R`). |
 | **`L`** | Set keyer to **ULTIMATIC** mode. (Acknowledged with `R`). |
 | **`D`** | Set keyer to **DAH Priority** mode. (Acknowledged with `R`). |
-| **`X`** | **Swap paddles** (DIT > DAH). (Acknowledged with `R`). |
+| **`X`** | **Swap paddles** (DIT $\leftrightarrow$ DAH). (Acknowledged with `R`). |
 | **`S`** | Toggle **Sidetone** ON/OFF for regular operation. |
 | **`K`** | Toggle **TX Transmitter Keying** output ON/OFF. |
-| **`I`** | Toggle **TX Output Inversion** (Active HIGH > Active LOW). |
+| **`I`** | Toggle **TX Output Inversion** (Active HIGH $\leftrightarrow$ Active LOW). |
 | **`P`** | **Pitch adjust mode**: Keyer sends continuous `E`s. Tap DIT/DAH to raise/lower frequency. |
 | **`Z`** | **Farnsworth pause adjust mode**. |
 | **`W`** | **Query speed**: Keyer sends current speed in WPM. |
@@ -136,17 +128,16 @@ All startup and reset parameters are now accessible and cleanly documented in `s
 
 1. Open `TinyKeyer.ino` in **Arduino IDE**.
 2. Select the target board:
-   * **Tools** > **Board** > **Adafruit AVR Boards** > **Adafruit Trinket (ATtiny85 @ 16MHz)**  
-     *(or using ATTinyCore: ATtiny25/45/85 > Chip: ATtiny85, Clock: 16.5MHz PLL / 16MHz PLL)*.
+   * **Tools** $\rightarrow$ **Board** $\rightarrow$ **Adafruit AVR Boards** $\rightarrow$ **Adafruit Trinket (ATtiny85 @ 16MHz)**  
+     *(or using ATTinyCore: ATtiny25/45/85 $\rightarrow$ Chip: ATtiny85, Clock: 16.5MHz PLL / 16MHz PLL)*.
 3. Select the programmer:
-   * **Tools** > **Programmer** > **USBasp**.
+   * **Tools** $\rightarrow$ **Programmer** $\rightarrow$ **USBasp**.
 4. Connect the USBasp programmer to the ATtiny85 ISP pins (MOSI=P0, MISO=P1, SCK=P2, RESET=P5, 5V, GND).
    * *Important*: Disconnect any external loads (speakers/buzzers) from P1 during ISP programming so the MISO line is not pulled down.
 5. Upload the code:
-   * Click **Sketch** > **Upload Using Programmer** (`Ctrl + Shift + U`).
+   * Click **Sketch** $\rightarrow$ **Upload Using Programmer** (`Ctrl + Shift + U`).
 
 ---
 
 ## 6. License
 This program is free software: you can redistribute it and/or modify it under the terms of the **GNU General Public License (GPLv3)** as published by the Free Software Foundation.
-
